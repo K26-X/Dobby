@@ -1,9 +1,6 @@
 name: Builder
 
-on:
-  push:
-    branches:
-      - master
+on: workflow_dispatch
 
 env:
   CMAKE_VERSION: 3.25.2
@@ -30,28 +27,10 @@ jobs:
     - name: Run Tree command
       run: tree
       continue-on-error: true
-
-    - name: Upload 1
-      uses: actions/upload-artifact@v4
-      with:
-        name: my-artifact
-        path: /build
-      continue-on-error: true
  
-    - name: Upload 2
+    - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
         name: my-artifact
         path: build
-      continue-on-error: true
-
-    - name: Tar
-      run: tar -cvf build.tar /build
-      continue-on-error: true
-
-    - name: Upload 3
-      uses: actions/upload-artifact@v4
-      with:
-        name: my-artifact
-        path: build.tar
       continue-on-error: true
