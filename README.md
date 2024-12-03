@@ -1,3 +1,9 @@
+# READ THIS MF
+
+- This is a fork repository of Dobby from "jmpews" (Original Author)
+- Why do I fork this? Because the original one didn't provide Android releases :/
+- Check the repostiory [DobbyHook](https://github.com/jmpews/Dobby)
+
 ## Dobby
 
 Dobby a lightweight, multi-platform, multi-architecture exploit hook framework.
